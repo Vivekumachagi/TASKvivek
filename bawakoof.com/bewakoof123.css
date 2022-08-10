@@ -1,0 +1,329 @@
+body {
+  position: absolute;
+  background-color: white;
+}
+
+#head1 {
+  display: none;
+}
+.room{
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+ul.roo li a img {
+  width: 70%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+
+}
+
+.row5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.roo {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+
+}
+
+ul.grid6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%;
+  text-align: center;
+  padding: 0%;
+
+}
+
+.id1 {
+  width: 100%;
+  height: 40px;
+}
+
+.row1 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+
+}
+
+.col1 {
+  margin-right: 10%;
+}
+
+li {
+  list-style: none;
+}
+
+
+ul.row1 {
+  grid-template-columns: auto;
+  gap: 30px;
+}
+
+.first {
+  height: 25px;
+}
+input.id1{
+  height: 40px;
+  border-radius: 3px;
+  text-align: center;
+}
+#log1{
+  padding: 2px;
+  margin: 2px;
+}
+#log2{
+  padding: 2px;
+  margin: 2px;
+}
+
+
+ul.mylist {
+  margin: auto;
+  padding: 3px;
+  overflow: hidden;
+  background-color: rgb(233, 236, 237);
+  list-style: none;
+  height: 20px;
+  padding-left: 5%;
+}
+
+
+li.id1 {
+  width: 70px;
+  height: 100%;
+  margin: auto;
+  margin-left: 50%;
+  align-items: center;
+  align-items: center;
+  display: flex;
+}
+
+.row3 {
+  display: flex;
+
+}
+
+ul.mylist li a {
+  font-weight: 10;
+  font-size: small;
+  opacity: 70%;
+
+}
+
+.header {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.row {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 0%;
+
+}
+
+#i1 {
+  width: 100%;
+}
+
+#hr1 {
+  color: aliceblue;
+  width: 80%;
+  align-items: center;
+}
+
+#img1 {
+  display: flex;
+  margin: auto;
+
+}
+
+ul.col1 li form button {
+  background-color: yellow;
+}
+
+ul.col1 li form input {
+  width: 50%;
+  background-color: #111;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.black {
+  background-color: #111;
+  color: aliceblue;
+
+}
+
+.image {
+  display: flex;
+  width: 32%;
+  margin: auto;
+}
+
+
+.plain {
+  background-color: white;
+}
+
+ul.mylist li {
+  float: left;
+  align-items: center;
+  align-items: center;
+  display: flex;
+}
+
+a.col1 {
+  color: white;
+}
+
+li.img1 img {
+  width: 50%;
+  height: 35px;
+}
+
+ul.mylist li a {
+  display: flex;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 5px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+
+}
+
+#th1 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.id1 {
+
+  float: right;
+  margin-left: 80%;
+  width: 300px;
+  height: 20px;
+  background-color: rgb(233, 236, 237);
+  border: none;
+
+}
+
+li a:hover {
+  background-color: rgb(90, 68, 68);
+}
+#plain1{
+  padding-left: 40%;
+}
+ul.plain {
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(242, 246, 251);
+  list-style: none;
+  align-items: center;
+  display: flex;
+  padding-left: 7%;
+}
+
+ul.plain li {
+  float: left;
+}
+
+ul.plain li a {
+  display: flex;
+  color: #111;
+  align-content: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: auto;
+}
+
+li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(147, 92, 92);
+}
+
+ul.blue li b a {
+  color: rgb(36, 210, 219);
+}
+
+li.a2 a {
+  margin-left: 75vw;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.a1 {
+  margin-left: 53vw;
+}
+
+.pla {
+  margin-left: 30vw;
+}
+.full{
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+@media screen and (max-width: 390px) {
+
+  body {
+    background-color: white;
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  #head2 {
+    display: none;
+  }
+
+  .header {
+    overflow: hidden;
+    background-color: rgb(250, 246, 28);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  #head1{
+    
+    display: flex;
+    background-color: rgb(250, 246, 28);
+
+    
+
+  }
+}
