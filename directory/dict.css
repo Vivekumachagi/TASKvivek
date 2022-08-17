@@ -1,0 +1,45 @@
+       body {
+           padding: 30px;
+           padding-left: 30px;
+           margin-left: 20px;
+       }
+       
+       #demo {
+           padding: 30px;
+           width: 60%;
+           height: 60%;
+       }
+       
+       input:focus {
+           outline: none;
+           border: 1px solid rgb(76, 78, 240);
+       }
+       
+       #inp {
+           display: flex;
+           flex-direction: row;
+           height: 20px;
+       }
+       
+       button {
+           outline: none;
+       }
+       
+       #txt {
+           height: 30px;
+           width: 90%;
+       }
+       
+       #btn {
+           height: 36px;
+           width: 10%;
+       }
+       
+       img {
+           height: 20px;
+           background-color: rgba(240, 248, 255, 0);
+       }
+       
+       #noun {
+           font-size: 40px;
+       }
