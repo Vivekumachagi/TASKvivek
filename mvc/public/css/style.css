@@ -1,7 +1,37 @@
  .form {
+     background-color: white;
+     width: 30%;
      display: flex;
      justify-content: center;
      align-items: center;
+     border: solid black 2px;
+     position: relative;
+     left: 470px;
+     top: 200px;
+ }
+ 
+ .form form h2 {
+     color: blue;
+ }
+ 
+ #input {
+     color: white;
+     background-color: rgb(23, 54, 54);
+ }
+ 
+ input[type=submit] :hover {
+     background-color: #3e8e41
+ }
+ 
+ input[type=submit] :active {
+     background-color: #3e8e41;
+     box-shadow: 0 5px #666;
+     transform: translateY(4px);
+ }
+ 
+ input [type=submit]:hover {
+     opacity: 0.1;
+     transition: 0.8;
  }
  
  .form form input {
@@ -13,5 +43,5 @@
  }
  
  body {
-     background: rgba(110, 108, 107, 0.692);
+     background: rgba(240, 211, 197, 0.692);
  }

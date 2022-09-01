@@ -1,5 +1,5 @@
 
 <?php foreach ($data as $post):?>
-    <p><?= "ID :".$post->id?><?="        Name :". $post->name?><?="        comment :". $post->comment?></p>
+    <p><?="  About :". $post->about?><?="  Comment :". $post->tweet?></p>
     <?php endforeach ?>
    

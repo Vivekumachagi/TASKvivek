@@ -1,0 +1,39 @@
+.form {
+    position: relative;
+    left: 420px;
+    border: solid 2px black;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.frm {
+    border-radius: 20px;
+    background-color: rgb(249, 251, 252);
+    padding-left: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.form form input {
+    display: flex;
+    margin: 20px;
+    width: 400px;
+    height: 30px;
+}
+
+body {
+    background-color: rgba(185, 192, 190, 0.137);
+}
+
+.imgs img {
+    padding-top: 10px;
+    width: 50px;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+}

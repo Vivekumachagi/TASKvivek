@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Pages extends Controller
 {
   public function __construct()
@@ -32,13 +33,10 @@ class Pages extends Controller
   {
     $models = $this->model('read');
     $post = $models->readall();
-    //var_dump($val);
-    // // $this->view('pages/about', $val);
     $data = [
       'posts' => $post
     ];
     $this->view('pages/displayone', $data);
-    //  var_dump($val);
   }
   public function signin()
   {
@@ -48,18 +46,51 @@ class Pages extends Controller
   {
     $models = $this->model('read');
     $post = $models->readone();
-    
-    if(($post->email == $_POST['email'] )&& ($post->password == $_POST['password']))
-    {
-      echo "data matched succesfully";
+    if ($post) {
+      if (($post->email == $_POST['email']) && ($post->password == $_POST['password'])) {
+        echo "data matched succesfully";
+        $data = [
+          'posts' => $post
+        ];
+        $_SESSION["username"] = $post->name;
+        $_SESSION['email'] = $post->email;
+        $this->view('pages/Userview', $data);
+      } else {
+        echo "incorrect user detail";
+      }
+    } else {
+      echo "user not found";
     }
+  }
+  public function signout()
+  {
+    echo "thankyou for using twitter " . $_SESSION["username"];
+    session_unset();
+    session_destroy();
+    $this->view('pages/login');
+  }
 
-    else 
-    {
-      echo "incorrect user detail";
+  public function postandfetchcomment()
+  {
+    if (isset($_POST['tweet'])) {
+
+      $models = $this->model('Upload');
+      $models->insertcomment();
+      $this->view('pages/Userview');
+    } else if (isset($_POST['showall'])) {
+      $models = $this->model('read');
+      $values = $models->readall();
+      $data = [
+        'posts' => $values
+      ];
+      $this->view('pages/display', $data);
+    } else if (isset($_POST['yourcom'])) {
+      $models = $this->model('read');
+      $values = $models->yourcom();
+      $data = [
+        'posts' => $values
+      ];
+      $this->view('pages/displayone', $data);
     }
-    
-
-    
   }
 }

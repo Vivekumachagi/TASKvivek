@@ -4,8 +4,7 @@ class Read extends Database
     public function readall()
     {
         if (isset($_POST['showall'])) {
-            echo "working print all";
-            $this->query("select * from text");
+            $this->query("select * from usertweet");
             $values = $this->resultSet();
             return $values;
         }
@@ -13,9 +12,15 @@ class Read extends Database
     public function readone()
     {
         $email = $_POST['email'];
-        $password =$_POST['password'];
-        $this->query("select email,password from userdetail where email='$email'");
-        return $val = $this->single();
+        $this->query("select name,email,password from userdetail where email='$email'");
+        return $this->single();
     }
-   
+    public function yourcom()
+    {
+        session_start();
+        $email = $_SESSION['email'];
+        $this->query("select * from usertweet where name = '$email'");
+        $values = $this->single();
+        return $values;
+    }
 }
