@@ -1,7 +1,6 @@
 .form {
     position: relative;
     left: 420px;
-    border: solid 2px black;
     width: 500px;
     align-items: center;
     justify-content: center;
@@ -10,7 +9,7 @@
 
 .frm {
     border-radius: 20px;
-    background-color: rgb(249, 251, 252);
+    background-color: rgb(167, 170, 172);
     padding-left: 30px;
     align-items: center;
     justify-content: center;

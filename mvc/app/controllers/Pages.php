@@ -44,6 +44,7 @@ class Pages extends Controller
   }
   public function getdata()
   {
+
     $models = $this->model('read');
     $post = $models->readone();
     if ($post) {
@@ -54,7 +55,9 @@ class Pages extends Controller
         ];
         $_SESSION["username"] = $post->name;
         $_SESSION['email'] = $post->email;
-        $this->view('pages/Userview', $data);
+        // $this->view('pages/Userview', $data);
+        header("location: http://localhost/mvc/Pages/userv");
+        exit();
       } else {
         echo "incorrect user detail";
       }
@@ -62,6 +65,10 @@ class Pages extends Controller
       echo "user not found";
     }
   }
+  public function userv()
+  {
+    $this->view('pages/Userview');
+  } 
   public function signout()
   {
     echo "thankyou for using twitter " . $_SESSION["username"];
@@ -69,9 +76,14 @@ class Pages extends Controller
     session_destroy();
     $this->view('pages/login');
   }
+  public function display()
+  {
+    $this->view('pages/display');
 
+  }
   public function postandfetchcomment()
   {
+   
     if (isset($_POST['tweet'])) {
 
       $models = $this->model('Upload');
@@ -91,6 +103,11 @@ class Pages extends Controller
         'posts' => $values
       ];
       $this->view('pages/displayone', $data);
+    }
+    else
+    {
+     header("location: http://localhost/mvc/Pages/userv");
+        exit();
     }
   }
 }

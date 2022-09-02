@@ -17,7 +17,6 @@ class Read extends Database
     }
     public function yourcom()
     {
-        session_start();
         $email = $_SESSION['email'];
         $this->query("select * from usertweet where name = '$email'");
         $values = $this->single();

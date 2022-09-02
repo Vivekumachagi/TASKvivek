@@ -3,7 +3,6 @@ class Upload extends Database
 {
     public function signup()
     {
-      
         $name=$_POST['name'];
         $date=$_POST['date'];
         $email=$_POST['email'];
